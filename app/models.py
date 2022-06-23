@@ -1,11 +1,10 @@
 #creating a model for our database
-import orml
-from orml import Base#importin base from sql alchemy
 from sqlalchemy import Column, Integer,String,Boolean,ForeignKey
 from sqlalchemy.orm import relationship
-from sqlalchemy.sql.expression import null,text
+from sqlalchemy.sql.expression import text
 from sqlalchemy.sql.sqltypes import TIMESTAMP
-from pydantic import  BaseModel  
+from .database import Base
+
 
 class Post(Base): #base is a model to create table,columns,describes how our table lok like
     __tablename__ = "newspost" #primary key ia a column that uniquely identifies each row in a table

@@ -2,8 +2,10 @@
 from sqlalchemy import create_engine 
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker 
-import config
+from sqlalchemy.orm import Session #establishes conversation btwn the database and program
 from config import settings
+
+
 #creating a connection string to pass to sql alchemy 
 #SQLALCHEMY_DATABASE_URL= "postgresql://<username>:<password>@<ip-address/hostname>/<database_name>"
 SQLALCHEMY_DATABASE_URL=f"postgresql://{settings.database_username}:{settings.database_password}@{settings.database_hostname}:{settings.database_port}/{settings.database_name}"
@@ -20,9 +22,9 @@ Base= declarative_base()
 
 
 
-
-
-
-
-
-
+def get_db():
+    db = SessionLocal()#Session object is responsible for talking to  the databases
+    try:
+        yield db
+    finally:
+        db.close()
