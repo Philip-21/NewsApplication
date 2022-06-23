@@ -3,7 +3,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker 
 from sqlalchemy.orm import Session #establishes conversation btwn the database and program
-from config import settings
+from .config import settings
 
 
 #creating a connection string to pass to sql alchemy 
