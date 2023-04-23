@@ -8,7 +8,7 @@
 - Postgres as its Database
 
 ### Getting Started 
-> git clone the repo
+$ git clone the repo
 
 #### Prerequisite
 - have a version of python 3 installed 
