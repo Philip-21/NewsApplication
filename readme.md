@@ -3,7 +3,7 @@
 
 ### Stacks used 
 - [FastApi](https://fastapi.tiangolo.com/) as its Python backend framework
-- [Alembic] () for migrations
+- [Alembic](https://alembic.sqlalchemy.org/en/latest/) for migrations
 - [SqlAlchemy](https://www.sqlalchemy.org/) as its ORM
 - [Postgres](https://www.postgresql.org/) as its Database
 
@@ -13,8 +13,7 @@
 - create a virtual environment and run
   ```
   $ pip install -r requirements.txt 
-  ```
-  to install all packages to run the application
+  ``` to install all packages to run the application
 - have Postman installed and configured on your machine 
 
 ### Getting Started 
